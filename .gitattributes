@@ -1,0 +1,33 @@
+# Normalise line endings for text files
+* text=auto
+
+# Unity YAML assets: keep LF and let Unity's Smart Merge resolve conflicts
+*.unity    text eol=lf merge=unityyamlmerge
+*.prefab   text eol=lf merge=unityyamlmerge
+*.asset    text eol=lf merge=unityyamlmerge
+*.mat      text eol=lf merge=unityyamlmerge
+*.anim     text eol=lf merge=unityyamlmerge
+*.controller text eol=lf merge=unityyamlmerge
+*.meta     text eol=lf
+*.cs       text eol=lf diff=csharp
+*.inputactions text eol=lf
+*.asmdef   text eol=lf
+*.json     text eol=lf
+
+# Binary art and audio. The template itself does not use Git LFS (GitHub template
+# repositories cannot contain LFS content), so these are stored as normal binaries.
+*.png      binary
+*.gif      binary
+*.wav      binary
+*.ogg      binary
+*.aseprite binary
+*.ase      binary
+
+# In a game created from this template, store art and audio in Git LFS instead:
+# run `git lfs install`, then replace the block above with these lines.
+# *.png      filter=lfs diff=lfs merge=lfs -text
+# *.gif      filter=lfs diff=lfs merge=lfs -text
+# *.wav      filter=lfs diff=lfs merge=lfs -text
+# *.ogg      filter=lfs diff=lfs merge=lfs -text
+# *.aseprite filter=lfs diff=lfs merge=lfs -text
+# *.ase      filter=lfs diff=lfs merge=lfs -text
